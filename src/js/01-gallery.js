@@ -1,8 +1,8 @@
 // Описаний в документації
-import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
-import "simplelightbox/dist/simple-lightbox.min.css";
-import { galleryItems } from "./gallery-items.js";
+import 'simplelightbox/dist/simple-lightbox.min.css';
+import { galleryItems } from './gallery-items.js';
 // Change code below this lin
 function generateGalleryItem(item) {
   let template = `<li class="gallery__item">
@@ -12,11 +12,11 @@ function generateGalleryItem(item) {
 </li>`;
   return template;
 }
-const gallery = document.querySelector(".gallery");
+const gallery = document.querySelector('.gallery');
 console.log(gallery);
-gallery.innerHTML = galleryItems.map(generateGalleryItem).join("");
+gallery.innerHTML = galleryItems.map(generateGalleryItem).join('');
 
-var lightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
+var lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
