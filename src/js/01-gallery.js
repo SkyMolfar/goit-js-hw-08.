@@ -16,7 +16,7 @@ const gallery = document.querySelector('.gallery');
 console.log(gallery);
 gallery.innerHTML = galleryItems.map(generateGalleryItem).join('');
 
-var lightbox = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
