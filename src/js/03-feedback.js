@@ -1,4 +1,4 @@
-const throttle = require('lodash.throttle');
+import throttle from 'lodash.throttle';
 
 const form = document.querySelector('.feedback-form');
 
@@ -36,6 +36,11 @@ form.addEventListener('submit', event => {
   const email = form.elements.email.value;
   const message = form.elements.message.value;
 
+  if (!email || !message) {
+    alert('Будь ласка, заповніть всі поля форми');
+    return;
+  }
+
   const formData = {
     email,
     message,
@@ -46,3 +51,4 @@ form.addEventListener('submit', event => {
   localStorage.removeItem('feedback-form-state');
   form.reset();
 });
+
